@@ -1,0 +1,109 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Standardise the size of icons in input groups
+.input-group-sm img.icon {
+  height: $input-icon-small;
+  width: $input-icon-small;
+}
+
+// Give feedback that input icons can be clicked
+.icon-input {
+  cursor: pointer;
+}
+
+// Set the colour of the input icons
+.icon-input img.icon {
+  filter: $addon-icon-color-filter;
+}
+
+// Set the size of the input icon
+.input-group-sm .icon-input {
+  width: $input-height-small;
+  height: $input-height-small;
+  line-height: unset;
+  padding: $input-icon-padding-small;
+}
+
+// Allow space on the input field for the input icon
+[dir="ltr"] .input-group-sm {
+  &.input-icon-primary > .form-control {
+    padding-left: $input-height-small;
+  }
+  &.input-icon-secondary > .form-control {
+    padding-right: $input-height-small;
+  }
+}
+
+// Make input group buttons appear like input icons
+.input-group-sm input ~ .input-group-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  > .btn {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    z-index: 4;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// Standardise the size of the input group buttons
+.input-group-sm > .input-group-btn {
+  > button.btn,
+  > a.btn {
+    width: $input-height-small;
+  }
+
+  > .btn {
+    padding: $input-icon-padding-small;
+
+    > img {
+      width: $input-icon-small;
+      height: $input-icon-small;
+    }
+  }
+}
+
+// Ensure input box buttons take up the correct space
+.input-group-sm input ~ .input-group-btn {
+  width: auto;
+}
+
+// Make filter form input group buttons appear like input icons
+.modal-dialog .form-group .input-group-sm {
+  .input-group-btn {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+  }
+  .datepickerbutton {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+// Correctly size and pad filter form input group buttons
+.modal-dialog .form-group .input-group-sm {
+  .datepickerbutton {
+    padding: $input-icon-padding-small;
+  }
+}
+
+// Make the filter form input use the full space
+.modal-dialog .form-group .input-group-sm {
+  .input-group-btn ~ input {
+    padding-left: $input-height-small;
+    width: calc(100% + $input-height-small);
+  }
+}

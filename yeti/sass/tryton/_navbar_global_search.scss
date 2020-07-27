@@ -1,0 +1,22 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Re-center action box as theme customises this
+#global-search {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+// Re-size user-favorites button to match theme
+#user-favorites {
+  .btn {
+  height: 31px;
+  width: 31px;
+
+    padding: 4px;
+  }
+}

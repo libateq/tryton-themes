@@ -1,0 +1,47 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Make the page contents fill the full height of the screen
+#main > .row-offcanvas {
+  height: calc(100vh - #{$navbar-height} - 2px) !important;
+}
+
+// Remove the space under the top navbar
+#tabs {
+  margin-top: 0;
+}
+
+// Give the page contents square corners
+#tabs {
+  border-radius: 0;
+}
+
+// Use a margin instead of padding to space out the page contents
+#tabs {
+  padding: 0;
+}
+.tab-pane > .panel {
+  margin: $form-outer-margin;
+}
+
+// Add some box-shadows under the navbar and at the side of the menu
+.tab-pane > .panel {
+  box-shadow: 0 0 4px $panel-default-border;
+}
+#main > .row {
+  box-shadow: inset 4px 4px 4px -4px $panel-default-border;
+}
+
+// Provide smooth scrolling on iOS
+#tabs {
+  -webkit-overflow-scrolling: touch
+}
+
+// Ensure the correct colour is used for the form title
+.tab-pane > .panel > .panel-heading a {
+  color: inherit;
+}

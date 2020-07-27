@@ -1,0 +1,55 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Allow customization of the menu background colour
+#menu {
+  background-color: $menu-bg;
+}
+
+// Give the menu a border on the right to match the navbar
+#menu {
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: 1px solid $navbar-default-border;
+}
+
+// Hide the top scrollbar
+#menu div.scrollbar.responsive {
+  display: none;
+}
+
+// Hide the selection state column
+#menu col.selection-state {
+  width: 0 !important;
+}
+
+// Make hiding and showing the sidebar smooth
+#tabs,
+#main > .row-offcanvas {
+  transition: all 0.25s ease-in-out;
+}
+
+// Remove the gap between the menu and the navbar
+#menu {
+  margin-top: 0;
+}
+
+// Don't round the corners on the menu
+#menu {
+  border-radius: 0;
+}
+
+// Remove the padding from around the menu
+#menu {
+  padding: 0;
+}
+
+// Provide smooth scrolling on iOS
+#menu {
+  -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,97 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Remove the margin below tables
+.table {
+  margin-bottom: 0;
+}
+
+// Add a dividing line at the bottom of the table
+.table {
+  border-bottom: 1px solid $table-border-color;
+}
+
+// Horizonally scroll the tabs if they overflow
+.tab-domain {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
+// Ensure the tabs do not wrap
+.tab-domain {
+  white-space: nowrap;
+
+  > .nav-tabs > li {
+    display: inline-block;
+    float: none;
+  }
+}
+
+// Add some padding around the tabs
+.tab-domain > .nav-tabs {
+  padding-top: $nav-tabs-padding-vertical; 
+  padding-left: $nav-tabs-padding-horizontal;
+  padding-right: $nav-tabs-padding-horizontal;  
+}
+
+// Try and add some border below off screen tabs
+.tab-domain > .nav-tabs > li:not(.active) > a {
+  border-bottom: 1px solid $nav-tabs-border-color;
+}
+
+// Move the counters to the top right of the tabs
+.tab-domain > .nav-tabs .badge {
+  font-size: $font-size-tiny;
+  min-width: auto;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  z-index: 4;
+
+  &:not([title="0"]) {
+    background-color: $brand-danger;
+  }
+}
+
+// Ensure columns with checkboxes are not too small
+.tree {
+  col.boolean,
+  col.selection-state {
+    width: $line-height-computed + ($table-condensed-cell-padding * 2) !important;
+  }
+}
+
+// Remove the artificial limit to the treeview height
+.treeview {
+  height: auto;
+}
+
+// Remove top and bottom borders from table-bordered elements
+.table-bordered {
+  border-top: none;
+  border-bottom: none;
+}
+
+// Fix the size of any images in the columns
+.treeview > table.tree {
+  img.column-affix,
+  a.column-affix > img {
+    width: $line-height-computed;
+    height: $line-height-computed;
+  }
+}
+
+// Try and make sure buttons don't expand the height of a line
+.tree .btn {
+  font-size: $font-size-tiny;
+}
+
+// Allow the text to fill more of the space on the button
+.tree .btn {
+  padding-left: $padding-xs-horizontal;
+  padding-right: $padding-xs-horizontal;
+}

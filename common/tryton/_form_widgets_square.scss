@@ -1,0 +1,29 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Round the corners of the input and select boxes
+.form-callto,
+.form-char,
+.form-date,
+.form-datetime,
+.form-email,
+.form-float,
+.form-integer,
+.form-many2one,
+.form-multiselection,
+.form-password,
+.form-pyson
+.form-selection,
+.form-sip,
+.form-time,
+.form-timedelta,
+.form-url {
+  input,
+  select {
+    border-radius: 0 !important;
+  }
+}

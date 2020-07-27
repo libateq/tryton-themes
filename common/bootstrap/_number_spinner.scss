@@ -1,0 +1,22 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Only show the spinner controls on numbers when needed
+input[type=number] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -moz-appearance: textfield;
+    margin: 0;
+  }
+
+  :not(.readonly) &:not([readonly]):hover,
+  :not(.readonly) &:not([readonly]):focus {
+    -moz-appearance: number-input;
+  }
+}

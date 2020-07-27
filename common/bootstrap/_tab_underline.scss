@@ -1,0 +1,45 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Make nav bar tabs just text with an underline
+.nav-tabs {
+  > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+
+    > a {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 2px solid transparent;
+      border-radius: 0;
+      color: $text-color;
+      padding-bottom: $nav-link-padding - 2px;
+      -webkit-transition: all 0.15s ease;
+      transition: all 0.25s ease;
+
+      &:hover {
+        background-color: inherit;
+        border-color: $nav-tabs-link-hover-border-color;
+        color: $link-color;
+      }
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: inherit;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 2px solid $nav-tabs-active-link-hover-border-color;
+        color: $link-color;
+      }
+    }
+  }
+}
