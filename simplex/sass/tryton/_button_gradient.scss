@@ -1,0 +1,24 @@
+
+.toolbar .navbar-brand .caret {
+  background-image:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="%23#{str-slice($toolbar-icon-color+"", 2)}" d="M7,10L12,15L17,10H7Z"/></svg>'),
+    linear-gradient(lighten($btn-default-bg, 3%), $btn-default-bg 6%, darken($btn-default-bg, 3%));
+}
+
+.toolbar .close {
+  background-image:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="%23#{str-slice($toolbar-icon-color+"", 2)}" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg>'),
+    linear-gradient(lighten($btn-default-bg, 3%), $btn-default-bg 6%, darken($btn-default-bg, 3%));
+}
+
+.toolbar .navbar-text,
+.form-many2many-toolbar span.btn,
+.form-one2many-toolbar span.btn,
+.window-form-toolbar span.btn {
+  background-image: linear-gradient(lighten($btn-default-bg, 3%), $btn-default-bg 6%, darken($btn-default-bg, 3%));
+  background-repeat: no-repeat;
+
+  .badge {
+    background-color: transparent;
+  }
+}
