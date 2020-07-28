@@ -44,6 +44,6 @@
 }
 
 // Dont let tabs overlap the space below the navbar
-#main_navbar > .nav-tabs > li > a {
+.navbar .nav-tabs > li > a {
   border-bottom: none;
 }
