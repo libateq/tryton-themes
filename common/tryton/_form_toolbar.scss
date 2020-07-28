@@ -130,6 +130,7 @@
 
 // Set the colour of button icons
 .form-many2many-toolbar .btn > img.icon,
-.form-one2many-toolbar .btn > img.icon {
+.form-one2many-toolbar .btn > img.icon,
+.window-form-toolbar .btn > img.icon {
   filter: $toolbar-icon-color-filter;
 }
