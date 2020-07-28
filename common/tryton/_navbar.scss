@@ -46,4 +46,9 @@
 // Dont let tabs overlap the space below the navbar
 .navbar .nav-tabs > li > a {
   border-bottom: none;
+
+  &:focus,
+  &:hover {
+    border-bottom: none;
+  }
 }
