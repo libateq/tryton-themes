@@ -1,0 +1,11 @@
+--- index.html	2020-07-26 11:19:04.117307588 +0100
++++ index.html	2020-06-29 17:23:01.504693873 +0100
+@@ -42,7 +42,7 @@
+         <link rel="stylesheet" type="text/css" href="custom.css" media="screen"/>
+         </head>
+         <body>
+-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0px;">
++        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0px;">
+             <div class="container-fluid">
+                 <div class="navbar-header">
+                     <button type="button" class="navbar-toggle collapsed"
