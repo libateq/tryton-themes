@@ -34,8 +34,18 @@
 }
 
 // Style the borders on inverted navbars
-.navbar-inverse .navbar-nav > li > a {
-  border-color: $navbar-tabs-border;
+.navbar-inverse .nav-tabs {
+  > li > a {
+    border-color: $navbar-tabs-border;
+  }
+
+  > li.active > a {
+    &,
+    &:focus,
+    &:hover {
+      border-color: $navbar-tabs-border;
+    }
+  }
 }
 
 // Make unselected inverted navbar tabs inherit their colour
@@ -52,3 +62,4 @@
     border-bottom: none;
   }
 }
+

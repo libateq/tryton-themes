@@ -5,6 +5,22 @@
  * information.
  */
 
-.navbar .nav-tabs > li > a {
-  border-color: transparent;
+.navbar-default .nav-tabs {
+  > li > a {
+    border-color: $navbar-tabs-border;
+  }
+
+  > li.active > a {
+    &,
+    &:focus,
+    &:hover {
+      border-color: $navbar-tabs-border;
+    }
+  }
+}
+
+// Ensure the bottom of the tab doesn't overlap
+.navbar .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
 }
