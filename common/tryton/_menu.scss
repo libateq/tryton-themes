@@ -5,9 +5,14 @@
  * information.
  */
 
-// Allow customization of the menu background colour
+// Allow customization of the menu colours
 #menu {
   background-color: $menu-bg;
+  color: $menu-color;
+
+  img {
+    filter: $menu-icon-color-filter;
+  }
 }
 
 // Give the menu a border on the right to match the navbar

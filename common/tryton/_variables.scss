@@ -6,6 +6,8 @@
  */
 
 $icon-color: $brand-primary !default;
+$menu-icon-color: $icon-color !default;
+$menu-icon-color-filter: unset !default;
 $toolbar-icon-color: $icon-color !default;
 $toolbar-icon-color-filter: unset !default;
 $addon-icon-color: $icon-color !default;
@@ -45,5 +47,6 @@ $toolbar-button-padding-vertical: $input-icon-padding-base * 1.5 !default;
 $tabs-bg: $body-bg !default;
 
 $menu-bg: #F8F8F8 !default;
+$menu-color: $text-color !default;
 
 $navbar-tabs-border: $brand-primary !default;
