@@ -4,4 +4,4 @@
  * repository for full copyright notices, license terms and support
  * information.
  */
-Sao.config.icon_colors = '#d9230f,#F00,#0F0'.split(',');
+Sao.config.icon_colors = '#d9230f,#808080,#469408'.split(',');

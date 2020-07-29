@@ -5,8 +5,6 @@
  * information.
  */
 
-.input-group-sm > .input-group-btn > .datepickerbutton,
-.input-group-sm input ~ span.input-group-btn > .btn {
-  background-color: transparent;
-  background-image: none;
+.tab-domain > .nav-tabs .badge {
+  background-color: $gray-light;
 }
