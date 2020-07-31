@@ -10,6 +10,7 @@ const { parallel, src, dest, watch } = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
 const concat = require('gulp-concat');
+const patch = require('gulp-apply-patch');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
@@ -44,11 +45,25 @@ function buildCustomCss(cb) {
         .pipe(dest(theme_dir, {sourcemaps: '.'}));
 }
 
+function buildIndex(cb) {
+    return src('../node_modules/tryton-sao/index.html')
+        .pipe(patch('index.html.diff'))
+        .pipe(dest(theme_dir));
+}
+
 function buildJs(cb) {
-    return src('js/**/*.js', {sourcemaps: true})
+    return src([
+            'js/**/*.js',
+            '../common/js/login_dialog.js'
+            ],
+            {sourcemaps: true})
         .pipe(concat('custom.js'))
         .pipe(uglify())
         .pipe(dest(theme_dir, {sourcemaps: '.'}));
+}
+
+function watchIndex(cb) {
+    watch(['index.html.diff'], buildIndex);
 }
 
 function watchJs(cb) {
@@ -62,5 +77,6 @@ function watchSass(cb) {
         ], parallel(buildBootstrapCss, buildCustomCss));
 }
 
-exports.default = parallel(buildBootstrapCss, buildCustomCss, buildJs);
-exports.watch = parallel(watchJs, watchSass);
+exports.default = parallel(
+    buildBootstrapCss, buildCustomCss, buildIndex, buildJs);
+exports.watch = parallel(watchIndex, watchJs, watchSass);
