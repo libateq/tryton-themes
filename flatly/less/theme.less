@@ -1,0 +1,57 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// https://github.com/thomaspark/bootswatch/issues/573#issuecomment-379241721
+@path: @web-font-path;
+
+// Import the sao default theme here to stop it being included below
+@import (once, reference) "../node_modules/tryton-sao/src/theme";
+
+// General imports
+@import "sao";
+@import "flatly/bootswatch";
+@import "tryton/variables";
+@import "variables";
+@import "flatly/variables";
+@import "theme-variables";
+
+// Bootstrap specific imports
+@import "bootstrap/form-checkbox";
+@import "bootstrap/number-spinner";
+
+// Tryton specific imports
+@import "tryton/login";
+@import "tryton/login-tryton-logo";
+
+@import "tryton/icon";
+@import "tryton/button";
+@import "tryton/input-addons";
+
+@import "tryton/page";
+@import "tryton/modal";
+@import "tryton/navbar";
+@import "tryton/menu";
+@import "tryton/menu-padded";
+
+@import "tryton/toolbar";
+@import "tryton/filter-box";
+@import "tryton/filter-box-icon";
+
+@import "tryton/form";
+@import "tryton/form-widgets";
+@import "tryton/form-widgets-rounded";
+@import "tryton/form-sections";
+@import "tryton/form-sections-full-width";
+@import "tryton/form-toolbar";
+
+@import "tryton/tree";
+
+@import "tryton/wizard";
+
+// Theme specific imports
+@import "checkbox-border";
+@import "toolbar-counter";

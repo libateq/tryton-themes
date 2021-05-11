@@ -7,6 +7,7 @@
   "dependencies": {
     "bootstrap": "^3.4.1",
     "bootstrap-rtl-ondemand": "^3.3.4-ondemand",
+    "bootswatch": "^3.4.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
