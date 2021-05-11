@@ -1,8 +1,8 @@
+#############
 Tryton Themes
 #############
 
 A set of themes for use with the Tryton web client (Sao).
-
 
 Installation
 ============
@@ -14,26 +14,12 @@ dist directory.
 Once you have followed the normal installation proccess for Sao you can then
 apply the theme.
 
-
-Simple Installation
-~~~~~~~~~~~~~~~~~~~
-
 This is done by replacing, or adding, files in your Sao installation by the
 ones from your chosen theme.  Each file from the `dist/<theme_name>/`
 directory should be copied over to the matching place in your Sao installation.
 
 Once you have restarted your Tryton server, and possibly also cleared your
 browser's cache, you should be able to use Tryton with your chosen theme.
-
-
-Nginx Installation
-~~~~~~~~~~~~~~~~~~
-
-Another alternative is to place the dist folder in a location where it is
-accessible by nginx.  You can then add a try_files rule which will then
-serve the theme's files and fall back to the original Sao files when the
-theme does not provide a replacement file.
-
 
 Building the Themes
 ===================
@@ -47,7 +33,6 @@ The build process uses npm and gulp.
     cd <theme-name>
     npx gulp
 
-
 Support
 =======
 
@@ -60,7 +45,6 @@ hesitate to get in touch:
 
 * Email: Support <support@libateq.uk>
 * Website: https://libateq.uk/support/
-
 
 License and Copyright
 =====================

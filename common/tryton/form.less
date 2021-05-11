@@ -1,0 +1,31 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Fix padding to stop hidden contents moving other contents down
+.form table.form-container > tbody > tr > td {
+  padding: 0;
+
+  > * {
+    padding: @form-padding-vertical @form-padding-horizontal;
+  }
+}
+
+// Line up cell contents with the top of the cell
+.form table.form-container > tbody > tr > td {
+  vertical-align: top;
+}
+
+// Add some space at the top and bottom of the form
+.tab-pane > .panel > .panel-body > .screen-container > .content-box {
+  padding-top: @padding-base-vertical;
+  padding-bottom: @padding-base-vertical;
+}
+
+// Provide smooth scrolling on iOS
+.content-box {
+  -webkit-overflow-scrolling: touch;
+}

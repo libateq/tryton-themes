@@ -1,0 +1,79 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Add a standard border and spacing to the top of sections
+td.form-many2many > .form-many2many,
+td.form-one2many > .form-one2many,
+td.form-notebook > .form-notebook,
+td.form-group_ > .form-group_ > legend,
+td > .form-separator {
+  border-top: 1px solid @form-section-border;
+  margin-top: @form-section-margin !important;
+}
+
+// Ensure the border below the section heading is right
+td.form-many2many > .form-many2many > .form-many2many-menu,
+td.form-one2many > .form-one2many > .form-one2many-menu,
+td.form-notebook > .form-notebook > .nav-tabs {
+  border-color: @form-section-border;
+}
+
+// Remove the border and add standard spacing below the sections
+td.form-many2many > .form-many2many,
+td.form-one2many > .form-one2many,
+td.form-notebook > .form-notebook,
+td.form-richtext > .form-richtext,
+td.form-group_ > .form-group_ > legend ~ table {
+  border-bottom: none;
+  margin-bottom: @form-section-margin !important;
+}
+
+// Remove margins around section titles
+td.form-many2many > .form-many2many > .form-many2many-menu > label,
+td.form-one2many > .form-one2many > .form-one2many-menu > label,
+td > .form-separator > label {
+  margin: 0 !important;
+}
+
+// Add the same space at the top of a group as at the top of the page
+td.form-group_ > .form-group_ > .form-container {
+  padding-top: @padding-base-vertical;
+}
+
+// Add standard padding around the section titles
+td.form-many2many > .form-many2many > .form-many2many-menu > label,
+td.form-one2many > .form-one2many > .form-one2many-menu > label {
+  display: inline-block;
+  padding: @form-heading-padding @form-heading-padding 0 @form-heading-padding;
+}
+td > .form-separator > label,
+td.form-group_ > .form-group_ > legend {
+  display: inline-block;
+  padding: @form-heading-padding;
+}
+
+// Make section titles match the heading style
+td.form-many2many > .form-many2many > .form-many2many-menu > label,
+td.form-one2many > .form-one2many > .form-one2many-menu > label,
+td > .form-separator > label,
+td.form-group_ > .form-group_ > legend {
+  color: @headings-color;
+  font-family: @headings-font-family;
+  font-size: @font-size-form-section;
+  font-style: @headings-font-style !important;
+  font-weight: @headings-font-weight;
+}
+
+// Make notebook nav-tabs match the heading style
+td.form-notebook > .form-notebook > .nav-tabs {
+  background-color: @panel-default-heading-bg;
+}
+
+// Hide the horizonal rule used by separators
+td > .form-separator > hr {
+  display: none;
+}

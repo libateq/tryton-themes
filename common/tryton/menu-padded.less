@@ -1,0 +1,17 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Add a gap above and below the side menu,
+#menu {
+  height: calc(100% - (@form-outer-margin * 2)) !important;
+  margin-top: @form-outer-margin;
+}
+
+// Give the menu a shadow to match the main part of the page
+#menu {
+  box-shadow: 0 0 4px @panel-default-border;
+}

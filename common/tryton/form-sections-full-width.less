@@ -1,0 +1,62 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Make notebooks span the whole width
+td.form-notebook > .form-notebook {
+  padding: 0 !important;
+}
+
+// Make groups span the whole width
+td.form-group_ > .form-group_ {
+  padding: 0 !important;
+
+  > legend,
+  > legend ~ table {
+    border-left: none;
+    border-right: none;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+}
+
+// Make separators span the whole width
+td > .form-separator {
+  padding: 0 !important;
+}
+
+// Make x2many fields span the whole width
+td.form-many2many > .form-many2many,
+td.form-one2many > .form-one2many {
+  border-left: none;
+  border-right: none;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+// Remove the curved corners from x2many fields
+td.form-many2many > .form-many2many,
+td.form-one2many > .form-one2many {
+  border-radius: 0;
+
+  > .panel-heading {
+    border-radius: 0;
+  }  
+}
+
+// Make richtext span the whole width
+td.form-richtext > .form-richtext {
+  border-left: none;
+  border-right: none;
+  padding: 0 !important;
+}
+
+// Remove the curved corners from richtext fields
+td.form-richtext > .form-richtext {
+  border-radius: 0;
+}

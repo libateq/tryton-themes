@@ -1,0 +1,136 @@
+/*
+ * This file is part of the tryton themes.
+ * Please see the COPYRIGHT and README.rst files at the top level of this
+ * repository for full copyright notices, license terms and support
+ * information.
+ */
+
+// Increase the button widths on the toolbar
+.form-many2many-toolbar,
+.form-one2many-toolbar,
+.window-form-toolbar {
+  .btn {
+    min-width: @form-toolbar-button-width;
+  }
+}
+
+// Add margin around the toolbar
+.form-many2many-toolbar,
+.form-one2many-toolbar,
+.window-form-toolbar {
+  margin: (@line-height-computed + (@form-heading-padding * 2) - @input-height-base) / 2;
+}
+
+// Correct padding around the button icons
+.form-many2many-toolbar .input-group-sm > .input-group-btn > .btn,
+.form-one2many-toolbar .input-group-sm > .input-group-btn > .btn {
+  padding: @input-icon-padding-small;
+}
+
+// Improve the style of the record number on the toolbar
+.form-many2many-toolbar,
+.form-one2many-toolbar,
+.window-form-toolbar {
+  span.btn {
+    background-color: @btn-default-bg;
+    border: 1px solid @btn-default-border;
+    cursor: auto;
+    padding: @padding-base-vertical @padding-base-horizontal;
+
+    .badge {
+      background-color: inherit;
+      color: @toolbar-icon-color;
+      font-weight: normal;
+      padding: (@input-height-small - @font-size-small - (@input-icon-padding-small * 2)) / 2 0;
+      position: static;
+      user-select: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+// Ensure the record number fields are a standard width
+.form-many2many-toolbar .input-group-sm > .input-group-btn > .btn > .badge,
+.form-one2many-toolbar .input-group-sm > .input-group-btn > .btn > .badge,
+.window-form-toolbar .input-group-sm > .input-group-btn > .btn > .badge {
+  max-width: 5em;
+  min-width: 5em;
+}
+
+// Fix border radius on first and last buttons
+.form-many2many-toolbar,
+.form-one2many-toolbar,
+.window-form-toolbar {
+  input.form-control:first-child {
+    border-top-left-radius: @border-radius-small;
+    border-bottom-left-radius: @border-radius-small;
+  }
+  .input-group-btn:first-child {
+    .btn:first-child {
+      border-top-left-radius: @border-radius-small;
+      border-bottom-left-radius: @border-radius-small;
+    }
+  }
+  .input-group-btn:last-child {
+    .btn:last-child {
+      border-top-right-radius: @border-radius-small;
+      border-bottom-right-radius: @border-radius-small;
+    }
+  }
+}
+
+// Ensure text input has borders
+.form-many2many-toolbar,
+.form-one2many-toolbar {
+  input.form-control {
+    border-style: solid;
+    border-width: 1px;
+    border-color-top: @input-border;
+    border-color-left: @input-border;
+    border-color-right: @input-border;
+  }
+}
+
+// Ensure disabled text input has a solid bottom border
+.form-many2many-toolbar,
+.form-one2many-toolbar {
+  input.form-control[disabled] {
+    border-bottom-style: solid;
+  }
+}
+
+// Undo the "in text input box" styling of the addon buttons
+.form-many2many-toolbar,
+.form-one2many-toolbar {
+  input ~ .input-group-btn {
+    position: relative;
+
+    > .btn {
+      background-color: @btn-default-bg;
+      border: 1px solid @btn-default-border;
+
+      &:focus,
+      &.focus {
+        background-color: darken(@btn-default-bg, 10%);
+        border-color: darken(@btn-default-border, 25%);
+      }
+      &:not([disabled]):hover {
+        background-color: darken(@btn-default-bg, 10%);
+        border-color: darken(@btn-default-border, 12%);
+      }
+      &:not([disabled]):active {
+        @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+      }
+    }
+  }
+}
+
+// Set the colour of button icons
+.form-many2many-toolbar .btn > img.icon,
+.form-one2many-toolbar .btn > img.icon,
+.window-form-toolbar .btn > img.icon {
+  filter: @toolbar-icon-color-filter;
+}
