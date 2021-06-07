@@ -4,12 +4,13 @@
  * repository for full copyright notices, license terms and support
  * information.
  */
+'use strict';
 
 jQuery(document).ready(function() {
-    Sao.Session.get_credentials_standard = Sao.Session.get_credentials
+    Sao.Session.get_credentials_standard = Sao.Session.get_credentials;
     Sao.Session.get_credentials = function() {
         jQuery('body').addClass('login');
-        var promise = Sao.Session.get_credentials_standard()
+        var promise = Sao.Session.get_credentials_standard();
         promise.always(function () {
             jQuery('body').removeClass('login');
         });

@@ -4,12 +4,15 @@
  * repository for full copyright notices, license terms and support
  * information.
  */
+'use strict';
+
 const theme_dir = '../dist/standard/'
 
 const { parallel, src, dest, watch } = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
 const concat = require('gulp-concat');
+const jshint = require('gulp-jshint');
 const less = require('gulp-less');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
@@ -37,6 +40,8 @@ function buildJs(cb) {
             '../common/js/login-dialog.js'
             ],
             {sourcemaps: true})
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
         .pipe(concat('custom.js'))
         .pipe(uglify())
         .pipe(dest(theme_dir, {sourcemaps: '.'}));

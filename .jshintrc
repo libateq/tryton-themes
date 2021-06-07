@@ -1,0 +1,8 @@
+{
+    "browser": true,
+    "globals": {
+        "Sao": false
+    },
+    "jquery": true,
+    "strict": "global"
+}
