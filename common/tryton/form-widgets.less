@@ -7,6 +7,18 @@
 
 @addon-icon-color-escaped: escape(@addon-icon-color);
 
+td.form-binary {
+  // Make binary fields take up the full available width
+  .input-group {
+    width: 100%;
+  }
+
+  // Leave space for the buttons
+  input.form-control:last-of-type {
+    padding-right: (@padding-xs-horizontal + (@input-icon-small + (@input-icon-padding-small * 2)) * 2);
+  }
+}
+
 td.form-boolean {
   // Position checkbox centrally
   > .form-boolean {
